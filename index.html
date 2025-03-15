@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image" href="/imgs/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Looking for appliancane services we do kind of everything just open the website">
+    <meta name="keywords" content="services Ac wasing machine ">
+
+    <title>AC & Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Reform services</a>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About us</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="slideshow">
+            <div class="overlay-content">
+                <div class="circle-text">
+                    <h3>All Type Of Services Available</h3>
+                    <h3>For enquiry call us now</h3>
+                    <a href="tel:+919886106311" class="call-us-btn" id="callUsNowBtn">
+                        Call Us Now
+                    </a>
+                </div>
+            </div>
+            <div class="slide active" style="background-image: url('/imgs/img1.jpeg')"></div>
+            <div class="slide" style="background-image: url('/imgs/img2.jpeg')"></div>
+            <div class="slide" style="background-image: url('/imgs/img3.jpeg')"></div>
+            <div class="slide" style="background-image: url('/imgs/img4.webp')"></div>
+            <div class="slide" style="background-image: url('/imgs/img5.webp')"></div>
+        </section>
+        <section class="services" id="services">
+            <p class="text_between">Our Services</p>
+            <p>Reliable appliance services at your doorstep!</p>
+            <p>From Ac to Microwave we have best trained partners</p>
+            <p>What are you waiting for Book now</p>
+            <div class="services-grid">
+                <button class="service-item" data-service="AC">
+                    <div class="service-icon">
+                        <img src="/imgs/air-conditioner.png" alt="A/c" class="size-img">
+                    </div>
+                    <h3>A/C</h3>
+                </button>
+                <button class="service-item" data-service="Washing Machine">
+                    <div class="service-icon">
+                        <img src="/imgs/washing-machine.png" alt="" class="size-img">
+                    </div>
+                    <h3>Washing Machine</h3>
+                </button>
+                <button class="service-item" data-service="Water purifier">
+                    <div class="service-icon">
+                        <img src="/imgs/appliance.png" alt="" class="size-img">
+                    </div>
+                    <h3>Water purifier</h3>
+                </button>
+                <button class="service-item" data-service="refrigerator">
+                    <div class="service-icon">
+                        <img src="/imgs/kitchen.png" alt="" class="size-img">
+                    </div>
+                    <h3>refrigerator</h3>
+                </button>
+                <button class="service-item" data-service="Microwave">
+                    <div class="service-icon">
+                        <img src="/imgs/microwave-oven.png" alt="" class="size-img">
+                    </div>
+                    <h3>Microwave</h3>
+                </button>
+            </div>
+        </section>
+
+        <div class="modal" id="serviceModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h2 id="modalTitle">Service Request</h2>
+                <!-- AC Service Form -->
+                <div class="form-group service-fields" id="acForm">
+                    <h2>AC Service Request</h2>
+                    <form id="acServiceForm">
+                        <div class="form-group">
+                            <label for="acName" required>Name</label>
+                            <input type="text" id="acName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="acPhone" required>Phone Number</label>
+                            <input type="tel" id="acPhone" name="phone" placeholder="Ex.0123456789" maxlength="10"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="acAddress">Address</label>
+                            <textarea id="acAddress" name="address" placeholder="Enter your address in detail"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="acType">AC Type</label>
+                            <select id="acType" name="acType" required>
+                                <option value="">Select AC Type</option>
+                                <option value="Split AC">Split AC</option>
+                                <option value="Window AC">Window AC</option>
+                                <option value="Cassette AC">Cassette AC</option>
+                                <option value="others">others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="acService">Service Type</label>
+                            <select id="acService" name="acService" required>
+                                <option value="">Select Service</option>
+                                <option value="Dry service ">Dry service - ₹499</option>
+                                <option value="jetspray cleaning">jetspray cleaning - ₹650</option>
+                                <option value="Installation">Installation - ₹2000</option>
+                                <option value="No cooling/less cooling">No cooling/less cooling - ₹219</option>
+                                <option value="AC Water leakage repair">AC Water leakage repair - ₹219</option>
+                                <option value="AC power issue Repair">AC power issue Repair - ₹219</option>
+                                <option value="AC noise/smell repair">AC noise/smell repair - ₹219</option>
+                                <option value="AC gas leak repair and refill">AC gas leak repair and refill - ₹219</option>
+                                <option value="Uninstallation">Uninstallation - ₹900</option>
+                                <option value="others">others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="acIssue">Issue Description</label>
+                            <textarea id="acIssue" name="acIssue"
+                                placeholder="Describe the issue you're facing..."></textarea>
+                        </div>
+                        <div class="visiting-charges">
+                            <p><strong>visting charges:</strong>219/-</p>
+                            <p><em>* Visting charges will be adjusted if you proceed with repair/service.</em></p>
+                        </div>
+                        <button type="button" class="submit-btn" id="acSubmitBtn">Send to WhatsApp</button>
+                    </form>
+                </div>
+
+                <!-- Washing Machine Service Form -->
+                <div class="form-group service-fields" id="washingForm">
+                    <h2>Washing Machine Service Request</h2>
+                    <form id="washingServiceForm">
+                        <div class="form-group">
+                            <label for="washingName">Name</label>
+                            <input type="text" id="washingName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="washingPhone">Phone Number</label>
+                            <input type="tel" id="washingPhone" name="phone" placeholder="Ex.0123456789" maxlength="10"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="washingAddress">Address</label>
+                            <textarea id="washingAddress" name="address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="washingType">Machine Type</label>
+                            <select id="washingType" name="washingType" required>
+                                <option value="">Select Machine Type</option>
+                                <option value="Top Load">Top Load</option>
+                                <option value="Front Load">Front Load</option>
+                                <option value="Front Load">Semi automatic</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="washing-machineService">Service Type</label>
+                            <select id="washing-machineService" name="acService" required>
+                                <option value="">Select Service</option>
+                                <option value="No washing">No washing</option>
+                                <option value="Spining Problem ">Spining Problem </option>
+                                <option value="Noise issue">Noise issue</option>
+                                <option value="No power">No power</option>
+                                <option value="others">others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="washingIssue">Issue Description</label>
+                            <textarea id="washingIssue" name="washingIssue"
+                                placeholder="Describe the issue with your washing machine..."></textarea>
+                        </div>
+                        <div class="visiting-charges">
+                            <p><strong>visting charges:</strong>219/-</p>
+                            <p><em>* Visting charges will be adjusted if you proceed with repair/service.</em></p>
+                        </div>
+                        <button type="button" class="submit-btn" id="washingSubmitBtn">Send to WhatsApp</button>
+                    </form>
+                </div>
+                <!-- Water Purifier Service Form -->
+                <div class="form-group service-fields" id="waterPurifierForm">
+                    <h2>Water Purifier Service Request</h2>
+                    <form id="waterPurifierServiceForm">
+                        <div class="form-group">
+                            <label for="waterPurifierName">Name</label>
+                            <input type="text" id="waterPurifierName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="waterPurifierPhone">Phone Number</label>
+                            <input type="tel" id="waterPurifierPhone" name="phone" placeholder="Ex.0123456789"
+                                maxlength="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="waterPurifierAddress">Address</label>
+                            <textarea id="waterPurifierAddress" name="address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="waterPurifierType">Water Purifier Type</label>
+                            <select id="waterPurifierType" name="waterPurifierType" required>
+                                <option value="">Select Water Purifier Type</option>
+                                <option value="RO">RO</option>
+                                <option value="UV">UV</option>
+                                <option value="UF">UF</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="waterPurifierService">Service Type</label>
+                            <select id="waterPurifierService" name="waterPurifierService" required>
+                                <option value="">Select Service</option>
+                                <option value="Installation">Installation</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Repair">Repair</option>
+                                <option value="Filter Replacement">Filter Replacement</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="waterPurifierIssue">Issue Description</label>
+                            <textarea id="waterPurifierIssue" name="waterPurifierIssue"
+                                placeholder="Describe the issue with your water purifier..."></textarea>
+                        </div>
+                        <div class="visiting-charges">
+                            <p><strong>visting charges:</strong>219/-</p>
+                            <p><em>* Visting charges will be adjusted if you proceed with repair/service.</em></p>
+                        </div>
+                        <button type="button" class="submit-btn" id="waterPurifierSubmitBtn">Send to WhatsApp</button>
+                    </form>
+                </div>
+                <!-- Refrigerator Service Form -->
+                <div class="form-group service-fields" id="refrigeratorForm">
+                    <h2>Refrigerator Service Request</h2>
+                    <form id="refrigeratorServiceForm">
+                        <div class="form-group">
+                            <label for="refrigeratorName">Name</label>
+                            <input type="text" id="refrigeratorName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="refrigeratorPhone">Phone Number</label>
+                            <input type="tel" id="refrigeratorPhone" name="phone" placeholder="Ex.0123456789"
+                                maxlength="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="refrigeratorAddress">Address</label>
+                            <textarea id="refrigeratorAddress" name="address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="refrigeratorType">Refrigerator Type</label>
+                            <select id="refrigeratorType" name="refrigeratorType" required>
+                                <option value="">Select Refrigerator Type</option>
+                                <option value="Single Door">Single Door</option>
+                                <option value="Double Door">Double Door</option>
+                                <option value="Side by Side">Side by Side</option>
+                                <option value="French Door">French Door</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="refrigeratorService">Service Type</label>
+                            <select id="refrigeratorService" name="refrigeratorService" required>
+                                <option value="">Select Service</option>
+                                <option value="Installation">Installation</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Repair">Repair</option>
+                                <option value="Cooling Issue">Cooling Issue</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="refrigeratorIssue">Issue Description</label>
+                            <textarea id="refrigeratorIssue" name="refrigeratorIssue"
+                                placeholder="Describe the issue with your refrigerator..."></textarea>
+                        </div>
+                        <div class="visiting-charges">
+                            <p><strong>visting charges:</strong>219/-</p>
+                            <p><em>* Visting charges will be adjusted if you proceed with repair/service.</em></p>
+                        </div>
+                        <button type="button" class="submit-btn" id="refrigeratorSubmitBtn">Send to WhatsApp</button>
+                    </form>
+                </div>
+
+                <!-- Microwave Service Form -->
+                <div class="form-group service-fields" id="microwaveForm">
+                    <h2>Microwave Service Request</h2>
+                    <form id="microwaveServiceForm">
+                        <div class="form-group">
+                            <label for="microwaveName">Name</label>
+                            <input type="text" id="microwaveName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="microwavePhone">Phone Number</label>
+                            <input type="tel" id="microwavePhone" name="phone" placeholder="Ex.0123456789"
+                                maxlength="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="microwaveAddress">Address</label>
+                            <textarea id="microwaveAddress" name="address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="microwaveType">Microwave Type</label>
+                            <select id="microwaveType" name="microwaveType" required>
+                                <option value="">Select Microwave Type</option>
+                                <option value="Solo">Solo</option>
+                                <option value="Grill">Grill</option>
+                                <option value="Convection">Convection</option>
+                                <option value="Counter top">Counter top</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="microwaveService">Service Type</label>
+                            <select id="microwaveService" name="microwaveService" required>
+                                <option value="">Select Service</option>
+                                <option value="button not working">Button not working</option>
+                                <option value="Not working">Not working</option>
+                                <option value="Noise issue">Noise issue</option>
+                                <option value="No power">No power</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="microwaveIssue">Issue Description</label>
+                            <textarea id="microwaveIssue" name="microwaveIssue"
+                                placeholder="Describe the issue with your microwave..."></textarea>
+                        </div>
+                        <div class="visiting-charges">
+                            <p><strong>Visiting charges:</strong> 219/-</p>
+                            <p><em>* Visiting charges will be adjusted if you proceed with repair/service.</em></p>
+                        </div>
+                        <button type="button" class="submit-btn" id="microwaveSubmitBtn">Send to WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="social-media-links">
+                <h3>Follow us on social media:</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/reform002?mibextid=ZbWKwL" target="_blank"><i
+                                class="fab fa-facebook-f">aceBook</i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter">witter</i></a></li>
+                    <li><a href="https://www.instagram.com/reform002" target="_blank"><i
+                                class="fab fa-instagram">nstagram</i></a></li>
+                </ul>
+            </div>
+            <div class="copyright-info">
+                <p>&copy; 2025 Reform Services. All rights reserved.</p>
+            </div>
+            <div class="credits">
+                <p>icons were downloaded from Flaticon</p>
+                <p>Authors:</p>
+                <p>
+                    <a href="https://www.flaticon.com/free-icons/air-conditioning" title="air conditioning icons">Air
+                        conditioning icons by Iconjam - Flaticon</a><br>
+                    <a href="https://www.flaticon.com/free-icons/water-purifier" title="water purifier icons">Water
+                        purifier icons by Shashank Singh - Flaticon</a><br>
+                    <a href="https://www.flaticon.com/free-icons/fridge" title="fridge icons">Fridge icons by Those Icons - Flaticon</a><br>
+                    <a href="https://www.flaticon.com/free-icons/microwave" title="microwave icons">Microwave icons by Mudassir designs - Flaticon</a><br>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="main.js"></script>
+
+</html>
